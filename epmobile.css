@@ -1,0 +1,590 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+/* Reset default body margins to remove outer gap */
+body {
+    margin: 0;
+    padding: 0;
+}
+/* Mobile Hamburger Menu */
+.hamburger-menu {
+    display: block;
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 40px;
+    height: 30px;
+    padding: 0;
+
+}
+
+.hamburger-menu span {
+    display: block;
+    width: 35px;
+    height: 4px;
+    background-color: white;
+    outline: #8B00FF solid 2px;
+    margin: 6px 0;
+    transition: 0.3s;
+    border-radius: 2px;
+}
+
+/* Mobile Menu */
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: min(80vw, 300px);
+    height: 65vh;
+    max-height: 400px;
+    border-bottom-right-radius: 30px;
+    border-top-right-radius: 30px;
+    background-color: white;
+    z-index: 999;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    overflow-y: auto;
+    padding: 50px 20px 20px 20px;
+    box-sizing: border-box;
+}
+
+.mobile-menu.active {
+    transform: translateX(0);
+}
+
+.close-menu {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 40px;
+    color: #FFA500;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+}
+
+
+/* Menu Links Container */
+.menu-links {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+/* Individual Menu Items */
+.menu-item {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    font-family: 'Fredoka One', sans-serif;
+    text-transform: uppercase;
+    transition: 0.3s;
+    letter-spacing: 1px;
+}
+
+.menu-item::before {
+    content: '★ ';
+    margin-right: 15px;
+    font-size: 26px;
+}
+
+.home-item {
+    color: #FFA500;
+}
+
+.pcg-item {
+    color: #FF1493;
+}
+
+.ep-item {
+    color: #7B2CBF;
+}
+
+.st-item {
+    color: #00BFFF;
+}
+
+.timetravelheader {
+    width: 100%;
+    text-align: center;
+    background-color: #7B2CBF;
+    padding: 10px 0;
+}
+
+.mobile-notice {
+    display: none;
+}
+
+.location {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    margin: 20px auto;
+    padding: 0 15px;
+    box-sizing: border-box;
+    gap: 15px;
+}
+.Second,
+.mario {
+    width: 80%;
+    max-width: 220px;
+    height: auto;
+    flex-shrink: 1;
+}
+
+.locationdetails {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: stretch;
+    padding: 15px;
+    box-sizing: border-box;
+    min-height: auto;
+}
+
+.locationdetails .loc-hours {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    padding: 20px 15px;
+    background-color: #FFE7D0;
+    border-radius: 16px;
+    font-size: 18px;
+
+}
+.loc-hours {
+    border-radius: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.loc-hours h4,
+.loc-hours ul {
+    margin: 0;
+    padding: 0;
+}
+
+.loc-hours ul li {
+    margin: 0;
+    padding: 4px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    line-height: 1.3;
+    gap: 15px;
+}
+
+.loc-hours .day {
+    font-weight: 600;
+    min-width: auto;
+    font-size: 18px;
+    text-align: left;
+    flex: 1;
+}
+
+.loc-hours .hours {
+    font-weight: 500;
+    min-width: auto;
+    text-align: right;
+    font-size: 18px;
+}
+
+.loc-hours .hours-closed {
+    color: #D92027;
+    font-weight: 700;
+    min-width: auto;
+    text-align: right;
+    font-size: 18px;
+}
+.loc-hours h4 {
+    font-weight: bold;
+    color: #F68B00;
+}
+
+.locationdetails .loc-photo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    width: 100%;
+}
+
+.locationdetails .loc-contact {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    gap: 15px;
+}
+
+.locationdetails .shopfrontepicpanda {
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+    display: block;
+    border-radius: 16px;
+    object-fit: contain;
+}
+.shopfrontepicpanda {
+    border-radius: 16px;
+}
+
+.hoursinfo {
+    padding: 20px 20px;
+    text-align: center;
+    box-sizing: border-box;
+    background-color: #ECDBEF;
+    border-radius: 16px;
+    margin: 15px;
+}
+.hoursinfo ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+}
+.hoursinfo ul li {
+    margin: 0;
+    padding: 4px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    line-height: 1.3;
+    gap: 15px;
+}
+
+.hoursinfo h4 {
+    font-weight: bold;
+    color: #77018D;
+    margin: 0 0 15px 0;
+    font-size: 18px;
+}
+
+.hoursinfo p {
+    font-family: 'DM Sans', sans-serif;
+    line-height: 1.6;
+    margin: 12px 0 0 0;
+    font-size: 18px;
+}
+.hoursinfo .day {
+    font-weight: 600;
+    min-width: auto;
+    text-align: left;
+    font-size: 18px;
+    flex: 1;
+}
+.hoursinfo .hours {
+    font-weight: 500;
+    min-width: auto;
+    text-align: right;
+    font-size: 18px;
+}
+.hoursinfo .hours-closed {
+    color: #D92027;
+    font-weight: 700;
+    min-width: auto;
+    text-align: right;
+    font-size: 18px;
+}
+.aboutshop {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    padding: 20px 15px;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.gameboyabout {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    flex-shrink: 0;
+    object-fit: cover;
+    border-radius: 16px;
+}
+
+.abouttext-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    background-color: #E0C8FE;
+    border-radius: 16px;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.abouttext-wrapper h3 {
+    font-family: 'DM Sans', sans-serif;
+    margin: 0;
+    line-height: 1.4;
+    font-size: 18px;
+}
+
+.aboutshop p {
+    font-family: 'DM Sans', sans-serif;
+    line-height: 1.6;
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+}
+
+.locationdetails ul {
+    list-style-position: inside;
+    list-style: none;
+    line-height: 1.6;
+    margin: 0;
+    text-align: center;
+}
+.storeaddress h4 {
+    font-weight: bold;
+    color: #FF3EB3;
+    line-height: 1.4;
+    margin: 0 0 8px 0;
+    font-size: 18px;
+}
+
+.store-link {
+    text-decoration: none;
+    color: inherit;
+    font-family: 'DM Sans', sans-serif;
+    cursor: pointer;
+    transition: opacity 150ms ease;
+    font-size: 18px;
+}
+
+.store-link:hover {
+    color: #ed02b6;
+}
+
+.storeaddress {
+    background-color: #FFD7E8;
+    width: 100%;
+    border-radius: 16px;
+    padding: 20px 15px;
+    box-sizing: border-box;
+    flex: 1 1 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.email h4 {
+    font-weight: bold;
+    color: #02A9ED;
+    margin: 0 0 8px 0;
+    font-size: 18px;
+}
+.email {
+    background-color: #D9F1FF;
+    border-radius: 16px;
+    width: 100%;
+    margin: 0;
+    padding: 20px 15px;
+    box-sizing: border-box;
+    line-height: 1.4;
+    flex: 1 1 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 18px;
+}
+.shopinfo {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    padding: 20px 15px;
+    box-sizing: border-box;
+}
+
+.fb,
+.yt,
+.ig {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    display: block;
+    padding-bottom: 20px;
+}
+
+.shopsocials {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 15px;
+    box-sizing: border-box;
+}
+
+.logo {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    flex-shrink: 0;
+    padding: 0;
+}
+
+.sociallinks {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.sociallinks a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.childhoodtreasures {
+    display: block;
+    width: 100%;
+    max-width: none;
+    height: auto;
+}
+
+.childhoodtreasurebanner {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    align-items: center;
+
+}
+
+.childhoodtreasurebanner img {
+    flex: 0 0 auto;
+    height: auto;
+    object-fit: cover;
+    width: 100%;
+    max-width: none;
+}
+
+.itemphotos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 20px 15px;
+    box-sizing: border-box;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.itemphoto {
+    width: 110px;
+    height: 110px;
+    object-fit: contain;
+    padding: 0;
+}
+.totop {
+    font-size: 18px;
+    padding: 20px 0;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 20px;
+    margin: 20px;
+    background-color: #E0C8FE;
+    outline: #7B2CBF solid 2px;
+}
+
+.totop a {
+    color: #77018D;
+    text-decoration: none;
+    transition: color 150ms ease;
+}
+.contact-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    padding: 20px 15px;
+    box-sizing: border-box;
+    width: 100%;
+}
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+}
+.contact-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 12px;
+}
+.contact-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+}
+
+.contact h2 {
+    font-family: 'Fredoka One', sans-serif;
+    letter-spacing: 1px;
+    font-size: 18pt;
+    color: #F68B00;
+    margin: 0 0 15px 0;
+}
+
+.contact-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.contact-link img {
+    display: block;
+    width: 180px;
+    height: auto;
+    object-fit: contain;
+    max-width: 100%;
+
+}
+
+footer {
+    background-color: #ffd68a;
+    text-align: center;
+    padding: 15px 10px;
+    margin-top: 10px;
+    font-size: 14px;
+}
