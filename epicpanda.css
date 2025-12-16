@@ -80,11 +80,6 @@ body {
     opacity: 0.8;
 }
 
-@media (max-width: 768px) {
-    .mobile-notice {
-        display: none;
-    }
-}
 
 /* Header fits to edge*/
 header {
@@ -565,7 +560,7 @@ nav {
 .dirt {
     width: 100%;
     height: 120px;
-    background: url('dirt.jpg') repeat-x center;
+    background: url('photos/dirt.jpg') repeat-x center;
     background-size: auto 100%;
     display: block;
 }

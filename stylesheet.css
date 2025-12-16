@@ -63,11 +63,6 @@ body {
     opacity: 0.8;
 }
 
-@media (max-width: 768px) {
-    .mobile-notice {
-        display: none;
-    }
-}
 
 /* Header fits to edge*/
 header {
