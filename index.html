@@ -5,6 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Time Travel Treasures | Home</title>
     <link rel="stylesheet" href="stylesheet.css">
+    <script>
+        (function() {
+            const isMobileViewport = () => window.matchMedia('(max-width: 768px)').matches;
+            const currentFile = window.location.pathname.split('/').pop();
+            const isHome = currentFile === '' || currentFile === 'index.html';
+
+            if (isHome && isMobileViewport()) {
+                window.location.replace('homemobile.html');
+            }
+        })();
+    </script>
 </head>
 <body>
     <div class="mobile-notice">
