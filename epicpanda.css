@@ -16,7 +16,9 @@ p {
     margin: 0;
     padding: 0;
 }
-
+ul {
+    font-family: 'DM Sans', sans-serif;
+}
 /* Reset body and html to remove default margins */
 html {
     margin: 0;
@@ -475,24 +477,6 @@ nav {
     max-height: 350px;
     object-fit: contain;
     padding-bottom: 20px;
-}
-.totop {
-    font-size: 24px;
-    padding: 40px 0px 40px 0px;
-    font-weight: bold;
-    text-align: center;
-}
-
-.totop a {
-    color: #02A9ED;
-    text-decoration: none;
-    transition: color 150ms ease;
-}
-
-.totop a:hover,
-.totop a:focus,
-.totop a:focus-visible {
-    color: #FF3EB3;
 }
 .contact-section {
     display: flex;
