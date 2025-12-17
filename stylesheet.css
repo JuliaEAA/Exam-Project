@@ -172,6 +172,7 @@ nav {
     font-size: 24px;
     line-height: 1.6;
     margin: 60px;
+    font-family: 'DM Sans', sans-serif;
 }
 .pcgpixelshop {
     background-color: #E0C8FE;
@@ -214,7 +215,8 @@ nav {
 }
 .content2{
     margin: 100px;
-    font-family: 'DM Sans', sans-serif;}
+    font-family: 'DM Sans', sans-serif;
+}
 
 .content2 p {
     font-size: 20px;
