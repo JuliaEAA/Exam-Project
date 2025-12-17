@@ -199,6 +199,7 @@ nav {
     align-items: center;
     width: 100%;
     line-height: 1.3;
+    font-family: 'DM Sans', sans-serif;
 }
 
 .loc-hours .day {
