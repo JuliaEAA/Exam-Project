@@ -17,6 +17,9 @@ p {
     margin: 0;
     padding: 0;
 }
+ul {
+    font-family: 'DM Sans', sans-serif;
+}
 
 /* Reset body and html to remove default margins */
 html {
